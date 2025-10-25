@@ -1,16 +1,55 @@
-# React + Vite
+# 📦 React User Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **User Management Dashboard** built with **React.js** and **Tailwind CSS**.  
+It allows users to **view, search, and add users** dynamically using data from an external API (`jsonplaceholder`) and local storage.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Setup Instructions
 
-## React Compiler
+Follow the steps below to run the project locally 👇
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/react-user-dashboard.git
+cd react-user-dashboard
+2️⃣ Install Dependencies
 
-## Expanding the ESLint configuration
+npm install
+3️⃣ Start the Development Server
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+npm run dev
+Once started, open your browser and visit:
+👉 http://localhost:5173/ (for Vite)
+or
+👉 http://localhost:3000/ (for Create React App)
+
+🧠 Short Description of Approach
+React Router DOM is used for page navigation (Home, Add User, User Details).
+
+Home Page: Fetches users from the JSONPlaceholder API and merges them with users stored in localStorage.
+
+Add User Page: Allows adding new users with form validation; data is persisted in localStorage.
+
+User Details Page: Displays complete details of a specific user using the id parameter.
+
+Card Component: Reusable card to display user info with Tailwind hover effects.
+
+Tailwind CSS provides a modern and fully responsive UI.
+
+🧩 Project Structure
+
+src/
+│
+├── Components/
+│   └── Card.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── AddUser.jsx
+│   └── UserDetails.jsx
+│
+├── App.jsx
+├── index.jsx
+└── index.css
